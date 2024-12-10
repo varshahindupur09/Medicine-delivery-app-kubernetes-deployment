@@ -1,5 +1,5 @@
 # Medicine-delivery-app-kubernetes-deployment
-I'm using this repository for deploying the medicine delivery app on Kubernetes.
+I'm using this repository for deploying the medicine delivery app on Kubernetes. The frontend and backend is deployed on Vercel.
 
 # commands
 docker build -t medicine-backend:1.0 .
