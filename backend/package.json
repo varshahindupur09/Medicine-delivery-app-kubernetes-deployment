@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "boto3": "^0.0.1",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "dotenv": "^16.4.5",

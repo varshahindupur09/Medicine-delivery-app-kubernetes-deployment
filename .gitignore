@@ -5,3 +5,7 @@ frontend/.env
 
 backend/node_modules
 frontend/node_modules
+
+instructions.md
+
+medapp-key-value-pair.pem

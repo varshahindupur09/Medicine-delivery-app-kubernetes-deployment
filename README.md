@@ -7,3 +7,7 @@ docker run -p 5001:5001 --env-file ./backend/.env medicine-backend:1.0
 
 docker build -t medicine-frontend:1.0 .
 docker run -p 3000:80 medicine-frontend:1.0
+
+# SSH into EC2
+Open local terminal
+ssh -i "/Users/varshahindupur/Downloads/Medicine-delivery-app-kubernetes-deployment/medapp-key-value-pair.pem" ubuntu@ec2-3-89-19-39.compute-1.amazonaws.com
