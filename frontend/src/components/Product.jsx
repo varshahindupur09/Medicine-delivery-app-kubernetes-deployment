@@ -1,3 +1,4 @@
+// frontend/src/components/Product.jsx
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import CategoryItem from '../components/CategoryItem';
@@ -14,13 +15,19 @@ const Wrapper = styled.div`
     align-items:center;
 `;
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000/api";
+
 const Product = (props) => {
     const [products,setProducts]= useState([]);
 
     useEffect(()=>{
         const getProducts = async ()=> {
             try{
-                const res = await axios.get(props.cat ? `http://localhost:5000/api/products?categories=${props.cat}`:"http://localhost:5000/api/products");
+                const res = await axios.get(
+                    props.cat ? 
+                    `${BASE_URL}/products?categories=${props.cat}`
+                    :`${BASE_URL}products`
+                );
                 setProducts(res.data);
             }
             catch(err){

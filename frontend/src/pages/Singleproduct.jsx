@@ -1,3 +1,4 @@
+// frontend/src/Singleproduct.jsx
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FavoriteBorder, ShoppingBagRounded, Star } from '@mui/icons-material';
@@ -175,6 +176,7 @@ const Box = styled.div`
 
 `;
 
+const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000/api";
 
 const Singleproduct = (props) => {
     const location =useLocation();
@@ -186,7 +188,7 @@ const Singleproduct = (props) => {
     useEffect(()=>{
         const getProduct = async ()=>{
             try{
-                const res = await axios.get(`http://localhost:5000/api/products/find/`+id);
+                const res = await axios.get(`${BASE_URL}/products/find/`+id);
                 setProduct(res.data);
             }
             catch(err){

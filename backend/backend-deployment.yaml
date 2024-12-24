@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   name: backend-deployment
 spec:
-  replicas:2
+  replicas: 2
   selector:
-    matchLabels:
-    app: backend
+    matchLabels: 
+      app: backend
   template:
     metadata:
-      lables:
+      labels:
         app: backend
     spec:
       containers:
         - name: backend
-          image: medicine-backend:1.0
+          image: 381491906666.dkr.ecr.us-east-1.amazonaws.com/medicine-backend:multiarch
           ports:
             - containerPort: 5001
           env:
             - name: SEC_KEY
-              value: cE8z!$N#2sd@kR9wL5^yF
+              value: "cE8z!$N#2sd@kR9wL5^yF"
             - name: JWT_KEY
               value: "abc123!@#$%^&*()"
             - name: MONGODB_URI

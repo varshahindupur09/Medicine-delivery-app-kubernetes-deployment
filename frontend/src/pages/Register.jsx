@@ -1,3 +1,4 @@
+// frontend/src/pages/Register.jsx
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from "../components/Navbar"
@@ -108,11 +109,13 @@ const Register = () => {
     isAdmin:'',
   });
 
+  const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000/api";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post(`${BASE_URL}/auth/register`, formData);
       console.log('Registration successful:', response.data);
     } catch (error) {
       console.error('Registration failed:', error);

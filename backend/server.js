@@ -9,7 +9,6 @@ const orderRoute = require("./routes/order");
 const cartRoute = require("./routes/cart");
 const cors = require("cors");
 const http = require("http");
-const dotenv = require("dotenv");
 dotenv.config();
 // ... (other code)
 
@@ -35,5 +34,5 @@ app.use('/api/cart' , cartRoute);
 
 
 server.listen(5001,function(){
-    console.log("Server is listening on port 5000");
+    console.log("Server is listening on port 5001");
 });
