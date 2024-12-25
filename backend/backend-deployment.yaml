@@ -17,10 +17,6 @@ spec:
           image: 381491906666.dkr.ecr.us-east-1.amazonaws.com/medicine-backend:multiarch
           ports:
             - containerPort: 5001
-          env:
-            - name: SEC_KEY
-              value: "cE8z!$N#2sd@kR9wL5^yF"
-            - name: JWT_KEY
-              value: "abc123!@#$%^&*()"
-            - name: MONGODB_URI
-              value: "mongodb+srv://hindupurv:monopoly2024@online-instrument-origi.qg8wzeg.mongodb.net/?retryWrites=true&w=majority&appName=online-instrument-original"
+          envFrom:
+            - secretRef:
+                name: backend-env

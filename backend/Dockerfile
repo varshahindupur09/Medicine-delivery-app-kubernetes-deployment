@@ -15,7 +15,9 @@ COPY . .
 
 # # Copy the DocumentDB CA certificate and .env file
 # COPY /config/global-bundle.pem /app/global-bundle.pem
-COPY .env .env
+# COPY .env .env
+ARG ENV_FILE_CONTENT
+RUN echo "$ENV_FILE_CONTENT" > .env
 
 # Expose the application port
 EXPOSE 5001

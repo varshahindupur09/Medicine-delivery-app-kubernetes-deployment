@@ -48,7 +48,8 @@ jobs:
         run: |
           docker buildx create --use
           docker buildx build --platform linux/amd64,linux/arm64 \
-            -t $ECR_REGISTRY/$ECR_FRONTEND_REPO:multiarch --push ./frontend
+          --build-arg ENV_FILE_CONTENT="$(cat ./backend/.env)" \
+          -t $ECR_REGISTRY/$ECR_BACKEND_REPO:multiarch --push ./backend
 
       # Step 6: Install kubectl
       - name: Install kubectl
