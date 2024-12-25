@@ -1,0 +1,24 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::381491906666:role/eksctl-mediapp-eks-cluster-nodegro-NodeInstanceRole-VW3du6dKENY8
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - system:masters
+      userarn: arn:aws:iam::123456789012:user/YourUserName
+      username: admin
+    - groups:
+      - system:masters
+      userarn: arn:aws:iam::381491906666:user/VarshaHindupur
+      username: admin
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-12-24T04:37:35Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "369922"
+  uid: e09e5c96-aff7-42ee-9989-25bc3442cec7
