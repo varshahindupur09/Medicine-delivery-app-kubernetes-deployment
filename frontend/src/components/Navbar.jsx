@@ -1,3 +1,4 @@
+// frontend/src/components/Navbar.jsx
 import React, {useState}from "react";
 import styled from "styled-components";
 import "../index.css";
@@ -119,11 +120,13 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
 
+  const BASE_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000/api";
+
   const handleSearch = async () => {
     // Handle the search logic here, making an API call to fetch products based on searchInput
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/search?title=${searchInput}`
+        `${BASE_URL}/products/search?title=${searchInput}`
       );
       setSearchResults(response.data);
       setShowDropdown(response.data.length > 0);

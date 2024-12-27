@@ -1,0 +1,12 @@
+{
+  "apiVersion": "v1",
+  "data": {
+    "mapRoles": "- groups:\n  - system:bootstrappers\n  - system:nodes\n  rolearn: arn:aws:iam::381491906666:role/eksctl-mediapp-eks-cluster-nodegro-NodeInstanceRole-VW3du6dKENY8\n  username: system:node:{{EC2PrivateDNSName}}\n",
+    "mapUsers": "- groups:\n  - system:masters\n  userarn: arn:aws:iam::381491906666:user/VarshaHindupur\n  username: admin\n"
+  },
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "aws-auth",
+    "namespace": "kube-system"
+  }
+}

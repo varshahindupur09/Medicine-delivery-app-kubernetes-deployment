@@ -18,5 +18,6 @@ spec:
         image: 381491906666.dkr.ecr.us-east-1.amazonaws.com/medicine-frontend:multiarch
         ports:
           - containerPort: 80
-        env: REACT_APP_BACKEND_URL
-          value: "http://abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com/api"
+        env: 
+          - name: REACT_APP_BACKEND_URL
+            value: "http://abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com/api"
