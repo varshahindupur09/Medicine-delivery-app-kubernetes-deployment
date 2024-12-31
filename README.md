@@ -168,4 +168,4 @@ P.S. Get Pod names using ``` kubectl get pods ```
 └── README.md
 ```
 
-## Go to http://varsha-mediswift.com/[!http://varsha-mediswift.com/]
+## Go to [http://varsha-mediswift.com/](http://varsha-mediswift.com/)
