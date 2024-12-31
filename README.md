@@ -168,4 +168,24 @@ P.S. Get Pod names using ``` kubectl get pods ```
 └── README.md
 ```
 
+#### Sample Backend Environment File (Later Stored as Kubernetes Secret)
+```
+.env
+##### /backend/.env
+SEC_KEY=<your_secret_key>                       # Replace <your_secret_key> with the secure key used for your backend
+JWT_SEC=<your_jwt_secret_key>                  # Replace <your_jwt_secret_key> with the secure JWT secret key
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/?retryWrites=true&w=majority&appName=<app-name>&connectTimeoutMS=30000&socketTimeoutMS=30000
+##### Replace <username>, <password>, <cluster-name>, and <app-name> with your MongoDB details
+STRIPE_KEY=<your_stripe_key>                   # Replace <your_stripe_key> with your Stripe secret key
+PORT=5001                                      # Backend application port
+```
+
+#### Sample Frontend Environment File (Later Stored as Kubernetes Secret)
+```
+.env
+# /frontend/.env
+REACT_APP_BACKEND_URL=http://<load-balancer-url>/api
+# Replace <load-balancer-url> with your backend's Kubernetes LoadBalancer URL
+```
+
 ## Go to [http://varsha-mediswift.com/](http://varsha-mediswift.com/)
