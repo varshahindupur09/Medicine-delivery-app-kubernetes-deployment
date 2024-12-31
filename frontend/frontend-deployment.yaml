@@ -1,3 +1,4 @@
+# frontend/frontend-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,4 +21,5 @@ spec:
           - containerPort: 80
         env: 
           - name: REACT_APP_BACKEND_URL
-            value: "http://abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com/api"
+            # value: "http://abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com/api"
+            value: "http://backend-service.default.svc.cluster.local:5001/api"
