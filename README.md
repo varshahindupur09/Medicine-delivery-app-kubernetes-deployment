@@ -171,11 +171,11 @@ P.S. Get Pod names using ``` kubectl get pods ```
 #### Sample Backend Environment File (Later Stored as Kubernetes Secret)
 ```
 .env
-##### /backend/.env
+# /backend/.env
 SEC_KEY=<your_secret_key>                       # Replace <your_secret_key> with the secure key used for your backend
 JWT_SEC=<your_jwt_secret_key>                  # Replace <your_jwt_secret_key> with the secure JWT secret key
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-name>.mongodb.net/?retryWrites=true&w=majority&appName=<app-name>&connectTimeoutMS=30000&socketTimeoutMS=30000
-##### Replace <username>, <password>, <cluster-name>, and <app-name> with your MongoDB details
+# Replace <username>, <password>, <cluster-name>, and <app-name> with your MongoDB details
 STRIPE_KEY=<your_stripe_key>                   # Replace <your_stripe_key> with your Stripe secret key
 PORT=5001                                      # Backend application port
 ```
