@@ -153,6 +153,7 @@ kubectl logs <pod-name>
 P.S. Get Pod names using ``` kubectl get pods ```
 
 ## Folder Structure
+```
 .
 ├── backend
 │   ├── Dockerfile
@@ -165,6 +166,6 @@ P.S. Get Pod names using ``` kubectl get pods ```
 │   ├── frontend-service.yaml
 │   └── src
 └── README.md
-
+```
 
 ## Go to http://varsha-mediswift.com/[!http://varsha-mediswift.com/]
