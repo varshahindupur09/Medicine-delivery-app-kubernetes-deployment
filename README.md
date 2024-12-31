@@ -188,4 +188,15 @@ REACT_APP_BACKEND_URL=http://<load-balancer-url>/api
 # Replace <load-balancer-url> with your backend's Kubernetes LoadBalancer URL
 ```
 
+## Terraform 
+Deployed all AWS resources using [Terraform](https://github.com/varshahindupur09/Medicine-delivery-app-kubernetes-deployment/tree/main/terraform)
+
+### Commands
+```
+terraform init
+terraform plan
+terraform apply
+```
+
 ## Go to [http://varsha-mediswift.com/](http://varsha-mediswift.com/)
+
