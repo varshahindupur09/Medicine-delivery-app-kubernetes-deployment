@@ -53,7 +53,7 @@ jobs:
       # Step 6: Install kubectl
       - name: Install kubectl
         run: |
-          curl -LO "https://dl.k8s.io/release/v1.31.2/bin/linux/amd64/kubectl"
+          curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.2/2024-11-15/bin/linux/amd64/kubectl
           chmod +x ./kubectl
           sudo mv ./kubectl /usr/local/bin/
 
