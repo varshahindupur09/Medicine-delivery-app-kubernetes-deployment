@@ -1,5 +1,7 @@
 # MediSwift Kubernetes Deployment
 
+<img width="1440" alt="MediSwift Deployed on K8" src="https://github.com/user-attachments/assets/2a4225d0-b86d-4655-b828-704d7dbbe54c" />
+
 This repository contains the deployment configuration and setup for the MediSwift application. MediSwift is a web application designed for managing medicines and healthcare products. It is deployed using Kubernetes on AWS EKS and uses AWS Route 53 for DNS configuration.
 
 ## Features
