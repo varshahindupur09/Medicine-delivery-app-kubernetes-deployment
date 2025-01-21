@@ -10,8 +10,6 @@ const cartRoute = require("./routes/cart");
 const cors = require("cors");
 const http = require("http");
 dotenv.config();
-// ... (other code)
-
 
 dotenv.config();
 const app = express();
@@ -21,8 +19,6 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch((err)=> console.log(err))
 
 const server = http.createServer(app); // Create an HTTP server
-
-
 
 app.use(cors());
 app.use(express.json());

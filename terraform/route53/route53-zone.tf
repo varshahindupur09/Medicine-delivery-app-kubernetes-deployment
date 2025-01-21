@@ -9,7 +9,7 @@ resource "aws_route53_record" "root_domain" {
   name    = "varsha-mediswift.com"
   type    = "A"
   alias {
-    name                   = "dualstack.abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com" # Load Balancer DNS Name
+    name                   = "varsha-mediswift-alb-667627284.us-east-1.elb.amazonaws.com" # Load Balancer DNS Name
     zone_id                = "Z35SXDOTRQ7X7K" # Load Balancer Zone ID (you can find it in AWS documentation for your region)
     evaluate_target_health = true
   }
@@ -21,5 +21,5 @@ resource "aws_route53_record" "www_subdomain" {
   name    = "www.varsha-mediswift.com"
   type    = "CNAME"
   ttl     = 300
-  records = ["abd9f2caab1484b0e8b17d43813e5981-1061278927.us-east-1.elb.amazonaws.com"] # Load Balancer DNS Name
+  records = ["varsha-mediswift-alb-667627284.us-east-1.elb.amazonaws.com"] # Load Balancer DNS Name
 }

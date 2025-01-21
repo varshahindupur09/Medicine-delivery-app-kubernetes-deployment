@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,EACE,QAAS,CACT,SAAU,CACV,2BAA+B,CAC/B,gCACF","file":"main.781dd9df.chunk.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  font-family: \"Lato\", sans-serif;\n  font-family: \"Open Sans\", sans-serif;\n}\n"]}

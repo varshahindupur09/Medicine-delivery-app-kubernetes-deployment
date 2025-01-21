@@ -1,7 +1,13 @@
+//backend/routes/Auth.js
 const router = require("express").Router();
 const User = require("../models/User");
 const CryptoJS = require("crypto-js");  
 const jwt = require("jsonwebtoken");
+
+// Health Check Endpoint
+router.get("/health", (req, res) => {
+    res.status(200).json({ status: "Healthy" });
+});
 
 // Register
 router.post("/register" , async (req,res) => {
@@ -52,8 +58,5 @@ router.post("/login" , async (req,res) => {
         res.status(500).json(err)
     }
 });
-
-
-
 
 module.exports = router

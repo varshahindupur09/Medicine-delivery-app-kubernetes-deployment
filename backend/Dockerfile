@@ -19,6 +19,9 @@ COPY . .
 ARG ENV_FILE_CONTENT
 RUN echo "$ENV_FILE_CONTENT" > .env
 
+# Install curl using apk (Alpine Linux package manager)
+RUN apk add --no-cache curl
+
 # Expose the application port
 EXPOSE 5001
 

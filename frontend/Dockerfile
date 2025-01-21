@@ -11,6 +11,8 @@ COPY package.json package-lock.json ./
 RUN ls -la /app
 
 # Install the dependencies
+RUN npm config set timeout 60000
+RUN npm config set strict-ssl false
 RUN npm install
 
 # Copy the rest of the application code
